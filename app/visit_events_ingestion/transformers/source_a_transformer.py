@@ -42,7 +42,7 @@ class SourceATransformer(BaseTransformer):
             .filter(col("rn") == 1) \
             .drop("rn")
 
-        return result
+        return BaseTransformer.remove_bad_quality_data(result) # Data Quality Example
 
     def transform_visits(self) -> DataFrame:
         df: DataFrame = self.raw_df
@@ -54,7 +54,7 @@ class SourceATransformer(BaseTransformer):
     to_date("visit.date").alias("visit_date"),
     col("visit.provider_notes.text").alias("provider_notes_text"),
     col("visit.provider_notes.author").alias("provider_notes_author")
-    ).withColumn("source", lit(self.source)) #.show()
+    ).withColumn("source", lit(self.source))
 
         return result
 

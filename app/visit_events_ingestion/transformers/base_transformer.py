@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from pyspark.sql import DataFrame
 import os
 import psycopg2
+from pyspark.sql.functions import col
 
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 POSTGRES_USER = os.getenv("POSTGRES_USER")
@@ -39,6 +40,10 @@ class BaseTransformer(ABC):
             .option("driver", "org.postgresql.Driver") \
             .mode("append") \
             .save()
+
+    @staticmethod
+    def remove_bad_quality_data(df: DataFrame) -> DataFrame:
+        return df.where(col("patient_id").isNotNull())
 
     @abstractmethod
     def transform_patients(self) -> DataFrame:
