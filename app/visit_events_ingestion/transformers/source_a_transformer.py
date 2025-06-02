@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from pyspark.sql import DataFrame, Window
 from pyspark.sql.functions import to_date, lit, current_date, col, row_number, explode
 
-from base_transformer import BaseTransformer,POSTGRES_URL,POSTGRES_USER,POSTGRES_PW
+from .base_transformer import BaseTransformer,POSTGRES_URL,POSTGRES_USER,POSTGRES_PW
 
 class SourceATransformer(BaseTransformer):
     def __init__(self, spark, date, source):

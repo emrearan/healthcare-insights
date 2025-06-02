@@ -1,6 +1,7 @@
-from source_a_transformer import SourceATransformer
-from source_b_transformer import SourceBTransformer
-from base_transformer import BaseTransformer
+from transformers.base_transformer import BaseTransformer
+from transformers.source_a_transformer import SourceATransformer
+from transformers.source_b_transformer import SourceBTransformer
+
 
 def run_pipeline(source: str, date: str, spark):
     transformer_class = {
