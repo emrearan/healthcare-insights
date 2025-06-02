@@ -1,0 +1,62 @@
+[
+  {
+    "patient_id": "P-1001",
+    "name": "John Doe",
+    "visits": [
+      {
+        "visit_id": "V-2023-001",
+        "date": "2023-05-01",
+        "diagnoses": [
+          {
+            "code": "ICD-10:E11.9",
+            "description": "Type 2 diabetes",
+            "treatments": [
+              {
+                "drug": "Metformin",
+                "dose": "500mg"
+              },
+              {
+                "drug": "Insulin",
+                "dose": "10 units"
+              }
+            ]
+          }
+        ],
+        "provider_notes": {
+          "text": "Patient reported improved symptoms.",
+          "author": "Dr. Smith"
+        }
+      }
+    ]
+  },
+  {
+    "patient_id": "P-1002",
+    "name": "Zev Harmon",
+    "visits": [
+      {
+        "visit_id": "V-2023-002",
+        "date": "2023-05-01",
+        "diagnoses": [
+          {
+            "code": "ICD-11:E11.90",
+            "description": "Viral Flu",
+            "treatments": [
+              {
+                "drug": "Test Drug Pill",
+                "dose": "500mg"
+              },
+              {
+                "drug": "Test Drug Spray",
+                "dose": "2 units"
+              }
+            ]
+          }
+        ],
+        "provider_notes": {
+          "text": "Patient is not so bad.",
+          "author": "Dr. Gilbert"
+        }
+      }
+    ]
+  }
+]

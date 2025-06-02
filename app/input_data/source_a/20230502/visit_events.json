@@ -1,0 +1,62 @@
+[
+  {
+    "patient_id": "P-1001",
+    "name": "John Doe",
+    "visits": [
+      {
+        "visit_id": "V-2023-003",
+        "date": "2023-05-02",
+        "diagnoses": [
+          {
+            "code": "ICD-10:E11.9",
+            "description": "Type 2 diabetes",
+            "treatments": [
+              {
+                "drug": "Metformin",
+                "dose": "500mg"
+              },
+              {
+                "drug": "Insulin",
+                "dose": "10 units"
+              }
+            ]
+          }
+        ],
+        "provider_notes": {
+          "text": "Patient reported improved symptoms.",
+          "author": "Dr. Smith"
+        }
+      }
+    ]
+  },
+  {
+    "patient_id": "P-1003",
+    "name": "New Patient9",
+    "visits": [
+      {
+        "visit_id": "V-2023-004",
+        "date": "2023-05-02",
+        "diagnoses": [
+          {
+            "code": "ICD-11:E11.90",
+            "description": "New Flu",
+            "treatments": [
+              {
+                "drug": "New Drug Pill",
+                "dose": "500mg"
+              },
+              {
+                "drug": "New Drug Spray",
+                "dose": "2 units"
+              }
+            ]
+          }
+        ],
+        "provider_notes": {
+          "text": "Patient is good.",
+          "author": "Dr. Gilbert"
+        }
+      }
+    ]
+  }
+]

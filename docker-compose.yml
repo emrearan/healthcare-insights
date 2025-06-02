@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: demo
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  spark:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile
+    environment:
+      POSTGRES_URL: jdbc:postgresql://postgres:5432/demo
+      POSTGRES_USER: user
+      POSTGRES_PW: password
+    entrypoint: [ "sleep", "infinity" ]
+    volumes:
+      - ./app:/app
+
+volumes:
+  pgdata:
