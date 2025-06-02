@@ -13,8 +13,6 @@ if __name__ == "__main__":
     source = sys.argv[1]
     date = sys.argv[2]
 
-    spark = SparkSession.builder \
-        .appName("Visit Events Ingestion") \
-        .getOrCreate()
+    spark = SparkSession.builder.appName("Visit Events Ingestion").getOrCreate()
 
     run_pipeline(source, date, spark)
