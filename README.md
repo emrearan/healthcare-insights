@@ -1,6 +1,8 @@
 # healthcare-insights
 
-The project includes a PostgreSQL database and Spark jobs. It aims to create an example of a healthcare data platform. All input data used in this project is mock/synthetic data created solely for demonstration purposes. To be able to run the project, you should have Docker installed.
+The project includes a PostgreSQL database and Spark jobs. It aims to create an example of a healthcare data platform. All input data used in this project is mock/synthetic data created solely for demonstration purposes. This project is for educational and demonstration purposes only and should not be used directly in production systems. 
+
+To be able to run the project, you should have Docker installed.
 
 ## Setup
 
